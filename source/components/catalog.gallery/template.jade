@@ -1,0 +1,15 @@
+// start /components/catalog.gallery/
+
+link( href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.css" rel="stylesheet" )
+script( src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.js" )
+link( rel="stylesheet", href="/components/catalog.gallery/style.css" )
+script( src="/components/catalog.gallery/script.js" )
+
+.fotorama( data-width="100%" data-ratio="3/2" data-loop="true" data-allowfullscreen="true" )
+  - var n = 0
+  while n < 9
+    - n++
+    .b-catalog-gallery__img
+      div( style="background-image: url(/upload/gallery/#{n}.jpg);" itemprop="photo" )
+
+// end /components/catalog.gallery/

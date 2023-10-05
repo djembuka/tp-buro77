@@ -1,0 +1,25 @@
+﻿// start /components/catalog.list.small/
+
+link( rel="stylesheet", href="/components/catalog.list.small/style.css" )
+script( src="/components/catalog.list.small/script.js" )
+
+.b-el-small__menu
+  a( href="#map" data-href="map" ) На карте
+  a( href="#list" data-href="list" ) Списком
+  
+  
+div( data-tab="el-map" )
+  script
+    | window.listSmallMapLat = 55;
+    | window.listSmallMapLng = 37;
+    | window.listSmallMapZoom = 12;
+  #elSmallMap( data-ajax-url="/components/catalog.list.small/markers.json" data-ajax-method="GET" )
+  #infoWindow
+
+.b-el-small( data-tab="el-list" data-ajax-url="/components/catalog.list.small/list.html" data-ajax-method="GET" )
+  
+script( src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js" async defer )
+  
+script( src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIBtmSOttEUoOM-fuV3gEtf_kGoZhm-YE&callback=initMap" async defer )
+
+// end /components/catalog.list.small/

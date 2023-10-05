@@ -1,0 +1,381 @@
+﻿body
+  background #383838
+  color #ccc
+  font-family $font
+  line-height $line-height-lg
+  font-weight 100
+  font-size $font-size-bs
+      
+img
+  vertical-align top
+    
+a
+  color #fff
+  text-decoration none
+  
+  &:hover,
+  &:active,
+  &:focus
+    color #33ccff
+  
+b
+  font-weight 700
+
+p
+  margin 15px 0
+
+h1, h2, h3, h4, h5, h6
+  font-family $font
+  font-weight 400
+
+h1
+  font-size 26pt
+  line-height $line-height-sm
+  margin 0 0 25px
+  
+  @media( max-width $breakpoint-mobile )
+    font-size 18pt
+    
+.b-h1-sub
+  font-size 17pt
+  color #999
+  
+h2,
+.b-h2
+  font-size 18pt
+  line-height $line-height-sm
+  margin 40px 0 20px
+  
+  &:first-child
+    margin-top 0
+  
+h5
+  font-size $font-size-sm
+  color #666666
+  
+h6
+  font-size 9pt
+  text-transform uppercase
+
+hr
+  margin 20px 0
+  padding 0
+  border 0
+  height 1px
+  
+  &.i-size-L
+    margin 40px 0
+  
+  &.i-size-S
+    margin 10px 0
+    
+  &.i-line
+    border-top 1px solid #e0dddd
+
+ul, ol
+  margin 20px 0 20px 27px
+  padding-left 23px
+
+ul
+  padding-left 0
+  
+  li
+    list-style-type none
+    background embedurl("img/dash.png") no-repeat 0 16px
+    padding-left 23px
+  
+.b-content
+  padding 20px 50px 55px
+  background-color $content-bg
+  color $text-color
+  max-width 1024px
+  box-sizing border-box
+  
+  @media( max-width $breakpoint-mobile )
+    padding 10px 20px
+    
+  a
+    color $link-color
+    
+    &:hover,
+    &:active,
+    &:focus
+      opacity .7
+      
+.b-page-content
+  padding 50px
+  color #fff
+  max-width 1000px
+  font-size 10.5pt
+  
+  &.i-center
+    margin 0 auto
+  
+  :first-child
+    margin-top 0
+  
+  .b-content &
+    color #333
+    padding 0
+  
+  @media( max-width $breakpoint-mobile )
+    padding 20px
+    
+  a
+    color #fff
+    text-decoration underline
+    
+    &:hover,
+    &:active,
+    &:focus
+      opacity .7
+      
+  h1:last-child
+    margin-bottom 0
+      
+.small
+  font-size $font-size-xs
+
+.i-border
+  border 5px solid $border-color
+
+.b-grid-e
+  position relative
+  
+  .b-block-a
+    
+    @media( min-width $breakpoint-desktop )
+      width calc( 100vw - 127px - 1024px )
+      min-height 1px
+      float left
+      
+      &.i-reverse
+        float right
+        
+        .b-el-small
+          left auto
+          right 0
+        
+  .b-block-b
+    
+    @media( min-width $breakpoint-desktop )
+      min-height 1px
+      padding-left calc( 100vw - 127px - 1024px )
+      
+      &.i-reverse
+        padding-right calc( 100vw - 127px - 1024px )
+        padding-left 0
+        
+  &:after
+    clear both
+    content ""
+    display table
+  
+.b-data-table
+  width 100%
+  border-collapse collapse
+  
+  .name,
+  .value
+    width 50%
+    
+  th
+    font-style normal
+    text-align left
+    font-weight normal
+    
+  thead th
+    font-weight 700
+    
+  th,
+  td
+    padding 10px
+    font-size $font-size-sm
+    border-bottom 1px solid $border-color
+    border-collapse collapse
+
+  @media( max-width $breakpoint-tablet )
+    
+    thead
+      display none
+      
+    td,
+    th
+      display block
+        
+    th
+      border none
+      padding-bottom 5px
+        
+    td
+      padding-top 5px
+      font-size $font-size-bs
+      
+.b-dl-table
+  max-width 520px
+  
+  dt
+    padding 10px 10px 5px
+    font-size $font-size-sm
+    
+  dd
+    margin 0
+    border-bottom 1px solid $border-color
+    padding 0 10px 10px
+    line-height $line-height-sm
+    
+  .th
+    display none
+    font-weight 700
+    
+  @media( min-width $breakpoint-tablet )
+  
+    .th
+      display block
+        
+    dt
+      float left
+      width 45%
+      border-bottom 1px solid $border-color
+      padding 10px
+      margin 0
+      box-sizing( border-box )
+      white-space nowrap
+      overflow hidden
+      text-overflow ellipsis
+        
+    dd
+      width 55%
+      padding 10px
+      margin-left 45%
+      box-sizing( border-box )
+      white-space nowrap
+      overflow hidden
+      text-overflow ellipsis
+      font-size $font-size-sm
+      line-height $line-height-lg
+      
+.b-download-panel
+  border 1px solid $border-color
+  padding 28px
+  display block
+  
+  @media( max-width $breakpoint-mobile )
+    padding 18px
+  
+.b-pdf-file
+  display inline-block
+  vertical-align top
+  background embedurl("img/pdf-icon.gif") no-repeat 0 center
+  padding-left 56px
+  line-height 38px
+  
+  &__name
+    display inline-block
+    vertical-align top
+    line-height $line-height-sm
+    
+
+.b-address-link
+  font-size $font-size-sm
+  
+.b-favorites-link
+  display block
+  width 35px
+  height 35px
+  background embedurl("img/heart.svg") no-repeat 0 0
+  position relative
+  
+  &__num
+    position absolute
+    top -13px
+    right -28px
+    display block
+    line-height 25px
+    width 25px
+    text-align center
+    color #fff
+    font-size 9pt
+    background-color #8877aa
+    border-radius 51%
+    
+.b-table
+  width 100%
+  font-size $font-size-sm
+  
+  tbody tr
+    cursor pointer
+    
+    &:hover
+      background-color lightness( $header-bg, 90%)
+  
+  thead th
+    border-bottom 1px solid $border-color
+    text-align left
+    
+  tbody td
+    padding 10px 10px 10px 0
+    border-bottom 1px solid $border-color
+    text-align left
+    
+  img
+    vertical-align top
+
+.nicescroll-rails
+  z-index 120 !important
+
+.row
+
+  @media ( max-width 520px)
+    margin-right -20px
+    margin-left -20px
+    
+.visible-xs-block
+  display none
+  
+  @media ( max-width $breakpoint-mobile )
+    display block !important
+    
+.b-ill-text-block
+  text-align center
+
+  img
+    max-width 100%
+    
+  &__text
+    
+    @media ( min-width 768px )
+      padding-top 70px
+    
+  hr.i-line
+    margin 30px 95px
+    
+  a
+    font-size 10.5pt
+      
+.b-content-clients
+  display flex
+  align-items center
+  flex-wrap wrap
+  margin-top 35px
+  
+  @media ( max-width $breakpoint-mobile )
+    justify-content center
+  
+  img
+    margin-right 50px
+    margin-bottom 20px
+  
+    @media ( max-width $breakpoint-mobile )
+      margin 0 25px 20px
+      
+.text-center
+  text-align center
+  
+.hidden-xs
+  @media( max-width 767px )
+    display none
+    
+.img-responsive
+  vertical-align top
+  max-width 100%

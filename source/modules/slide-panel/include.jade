@@ -1,0 +1,67 @@
+﻿.b-side
+  
+  .b-side-icons
+
+    .b-logo
+      a.b-logo__title( href="/" )
+        img( src="/upload/logo-buro-77.svg" width="111" height="47" alt="" )
+      
+    a#sideBarButton.b-side-bar__button( href="#sidePanel" )
+  
+    span#sideBarTop.b-side-bar__top наверх
+    
+    a.b-favorites-link( href="/favorites/" )
+      span.b-favorites-link__num 15
+    
+    a#sideSearchButton.b-side-bar__search( href="#sideSearch" )
+    
+  #sideSearch.b-side-search
+    
+    .b-side-search__content
+    
+      .b-side__search-wrapper
+        .b-side__search
+          form.form-inline( action="" method="GET" )
+            .form-group
+              label.b-search-icon( for="title-search-input" style="background-image: url(/template/images/icons/search-icon-zoom.svg)" )
+              input#title-search-input.form-control( type="search" placeholder="Я ищу (лот, название дома, район, цена, площадь)..." value="" )
+              .b-side__search__close
+        
+        .b-side__search__result
+          .b-side__search__result__header Быстрые ссылки
+          div
+            a( href="" ) Mezaparka Rezidences
+          div
+            a( href="" ) Сареево 15
+          div
+            a( href="" ) CAPITAL TOWERS
+          div
+            a( href="" ) ОКО
+      
+      include ../../components/search-title/template
+  
+  #sideBar.b-side-bar
+    
+    .b-side-bar__content
+    
+      menu
+        li
+          a( href="/estates/" ) Объекты недвижимости
+          
+          menu
+            li
+              a( href="/estates/" ) Загородная 
+                span 23
+            li
+              a( href="/estates/" ) Городская 
+                span 4
+            li
+              a( href="/estates/" ) Коммерческая 
+                span 2
+              
+        li
+          a( href="/about/" ) О компании
+        li
+          a( href="/estates/" ) Сотрудничество
+        li
+          a( href="/contacts/" ) Контакты
