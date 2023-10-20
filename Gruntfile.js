@@ -290,6 +290,22 @@ module.exports = function( grunt ) {
           }
         ]
       },
+      devJSComponents: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= source %>components/',
+            src: [ '**/*.js' ],
+            dest: '<%= dest %>components/'
+          },
+          {
+            expand: true,
+            cwd: '<%= source %>components/',
+            src: [ '**/*.json' ],
+            dest: '<%= dest %>components/'
+          }
+        ]
+      },
       upload: {
         files: [
           {
@@ -326,6 +342,12 @@ module.exports = function( grunt ) {
             expand: true,
             cwd: '<%= source %>components/',
             src: [ '**/*.js' ],
+            dest: '<%= temp %>components/'
+          },
+          {
+            expand: true,
+            cwd: '<%= source %>components/',
+            src: [ '**/*.json' ],
             dest: '<%= temp %>components/'
           }
         ]
@@ -398,7 +420,7 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks( 'grunt-contrib-uglify' );
   
   grunt.registerTask( 'css', [ 'stylus:template', 'stylus:components', 'concat:pluginsCSS' ] );
-  grunt.registerTask( 'js', [ 'concat:js', 'jshint:dev', 'concat:pluginsJS', 'uglify:devTemplate', 'uglify:devComponents', 'clean:js' ] );
+  grunt.registerTask( 'js', [ 'concat:js'/*, 'jshint:dev'*/, 'concat:pluginsJS', 'copy:devJSComponents',/*'uglify:devTemplate', 'uglify:devComponents',*/ 'clean:js' ] );
   grunt.registerTask( 'html', [ 'copy:images', 'jade:dev' ] );
   grunt.registerTask( 'default', [ 'connect', 'css', 'js', 'html', 'watch' ] );
   
@@ -412,7 +434,7 @@ module.exports = function( grunt ) {
     //'jshint:prod',
     'uglify:prodTemplate',
     'concat:prodPluginsJS',
-    'uglify:prodComponents',
+    //'uglify:prodComponents',
     //images
     'clean:images',
     'copy:tempImages',
